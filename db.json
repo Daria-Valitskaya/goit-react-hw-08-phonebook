@@ -1,0 +1,24 @@
+{
+  "contacts": [
+    {
+      "name": "Daria Valitskaya",
+      "number": "+380663578033",
+      "id": 1
+    },
+    {
+      "name": "Svetlana Valitskaya",
+      "number": "+380677324245",
+      "id": 2
+    },
+    {
+      "name": "Dmytro Valitskiy",
+      "number": "+380913733018",
+      "id": 3
+    },
+    {
+      "name": "iMacros user",
+      "number": "+380663579064",
+      "id": 4
+    }
+  ]
+}
