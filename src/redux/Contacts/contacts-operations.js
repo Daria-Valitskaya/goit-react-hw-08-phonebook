@@ -10,7 +10,6 @@ import {
   fetchContactsSuccess,
   fetchContactsError,
 } from "./contacts-actions";
-axios.defaults.baseURL = " http://localhost:4000";
 
 const addContact = (name, number) => (dispatch) => {
   const contact = { name, number };
@@ -37,4 +36,10 @@ const fetchContact = () => (dispatch) => {
     .catch((error) => dispatch(fetchContactsError(error)));
 };
 
-export { addContact, deleteContact, fetchContact };
+const contactsOperations = {
+  addContact,
+  deleteContact,
+  fetchContact,
+};
+
+export default contactsOperations;

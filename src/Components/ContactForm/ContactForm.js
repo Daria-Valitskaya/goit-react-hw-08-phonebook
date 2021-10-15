@@ -3,7 +3,7 @@ import { getContacts } from "../../redux/Contacts/contacts-selectors";
 
 import s from "./ContactForm.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { addContact } from "../../redux/Contacts/contacts-operations";
+import { contactsOperations } from "../../redux/Contacts";
 function ContactForm() {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
@@ -23,7 +23,8 @@ function ContactForm() {
     }
   };
 
-  const onAddContact = (name, number) => dispatch(addContact(name, number));
+  const onAddContact = (name, number) =>
+    dispatch(contactsOperations.addContact(name, number));
   const handleSubmitForm = (event) => {
     event.preventDefault();
     if (

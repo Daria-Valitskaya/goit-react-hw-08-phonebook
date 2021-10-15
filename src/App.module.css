@@ -1,0 +1,24 @@
+.container {
+  padding-left: 10px;
+}
+
+.mainTitle {
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: left;
+  color: #2b3c8a;
+  text-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.text {
+  font-weight: 700;
+  font-size: 18px;
+  color: #717579;
+  margin: 0;
+  /* text-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); */
+}
+
+.block {
+  margin: 15px 0 15px 0;
+  display: flex;
+}
