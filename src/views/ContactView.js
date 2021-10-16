@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import React, { useEffect } from "react";
 import ContactList from "../Components/ContactList/ContactList";
 import ContactForm from "../Components/ContactForm/ContactForm";
-import Section from "../Components/Section/Section";
+// import Section from "../Components/Section/Section";
 import Filter from "../Components/Filter/Filter";
 import s from "../App.module.css";
 import MyLoader from "../Components/MyLoader/MyLoader";
@@ -18,16 +18,14 @@ function ContactViews() {
 
   return (
     <>
-      <Section>
-        <div className={s.block}>
-          <Filter />
-        </div>
-        <h3 className={s.mainTitle}>Contacts:</h3>
-        {/* {getLoading && <MyLoader />} */}
-        <MyLoader />
-        <ContactForm />
-        <ContactList />
-      </Section>
+      <div className={s.block}>
+        <Filter />
+      </div>
+      <h3 className={s.mainTitle}>Contacts:</h3>
+      {/* {getLoading && <MyLoader />} */}
+      <MyLoader />
+      <ContactForm />
+      <ContactList />
     </>
   );
 }
