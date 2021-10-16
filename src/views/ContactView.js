@@ -11,8 +11,8 @@ import { contactsOperations } from "../redux/Contacts";
 
 function ContactViews() {
   const dispatch = useDispatch();
-  useEffect(() => dispatch(contactsOperations.fetchContact()), [dispatch]);
 
+  useEffect(() => dispatch(contactsOperations.fetchContact()), [dispatch]);
   return (
     <>
       <Filter />

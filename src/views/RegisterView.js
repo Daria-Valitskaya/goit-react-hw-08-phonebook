@@ -4,7 +4,7 @@ import { operations } from "../redux/Auth";
 
 const styles = {
   form: {
-    width: 320,
+    width: 480,
   },
   label: {
     display: "flex",

@@ -8,7 +8,7 @@ const Filter = () => {
   const dispatch = useDispatch();
 
   return (
-    <label className={s.label}>
+    <label className={s.title}>
       Find contacts by name
       <input
         className={s.input}

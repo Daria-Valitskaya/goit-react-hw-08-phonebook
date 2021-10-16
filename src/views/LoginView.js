@@ -5,7 +5,7 @@ import s from "./Views.module.css";
 
 const styles = {
   form: {
-    width: 500,
+    width: 480,
   },
   label: {
     display: "flex",

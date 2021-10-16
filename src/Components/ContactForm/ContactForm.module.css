@@ -4,8 +4,14 @@
   border-radius: 10px;
   border: 1px solid #eee;
   transition: 0.3s border-color;
-  margin: auto;
+  margin: 16px auto;
 }
 .input:hover {
   border: 1px solid #aaa;
+}
+.title {
+  font-weight: 700;
+  text-align: center;
+  color: #4b0908;
+  text-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }

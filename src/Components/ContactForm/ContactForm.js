@@ -45,7 +45,7 @@ function ContactForm() {
   };
   return (
     <form onSubmit={handleSubmitForm}>
-      <label>
+      <label className={s.title}>
         Name
         <input
           className={s.input}
@@ -59,7 +59,7 @@ function ContactForm() {
         />
       </label>
 
-      <label>
+      <label className={s.title}>
         Number
         <input
           className={s.input}
