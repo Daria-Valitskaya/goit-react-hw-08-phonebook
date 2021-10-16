@@ -1,15 +1,18 @@
 import Section from "./Components/Section/Section";
 
-import { useEffect } from "react";
+import { useEffect, Suspense, lazy } from "react";
 import { useDispatch } from "react-redux";
-import { Switch, Route } from "react-router-dom";
-import AppBar from "./Components/AppBar";
-import HomeView from "./views/HomeView";
-import RegisterView from "./views/RegisterView";
-import LoginView from "./views/LoginView";
+import { Switch } from "react-router-dom";
 
+import AppBar from "./Components/AppBar";
 import { operations } from "./redux/Auth";
-import ContactViews from "./views/ContactView";
+import PrivateRoute from "./Components/PrivateRoute";
+import PublicRoute from "./Components/PublicRoute";
+
+const HomeView = lazy(() => import("./views/HomeView"));
+const RegisterView = lazy(() => import("./views/RegisterView"));
+const LoginView = lazy(() => import("./views/LoginView"));
+const ContactViews = lazy(() => import("./views/ContactView"));
 
 export default function App() {
   const dispatch = useDispatch();
@@ -23,10 +26,20 @@ export default function App() {
       <AppBar />
 
       <Switch>
-        <Route exact path="/" component={HomeView} />
-        <Route path="/register" component={RegisterView} />
-        <Route path="/login" component={LoginView} />
-        <Route path="/contacts" component={ContactViews} />
+        <Suspense fallback={null}>
+          <PublicRoute exact path="/">
+            <HomeView />
+          </PublicRoute>
+          <PublicRoute exact path="/register" restricted>
+            <RegisterView />
+          </PublicRoute>
+          <PublicRoute path="/login" redirectTo="/contacts" restricted>
+            <LoginView />
+          </PublicRoute>
+          <PrivateRoute path="/contacts" redirectTo="/login">
+            <ContactViews />
+          </PrivateRoute>
+        </Suspense>
       </Switch>
     </Section>
   );
