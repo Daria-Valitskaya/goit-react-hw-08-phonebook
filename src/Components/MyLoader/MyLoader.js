@@ -8,7 +8,7 @@ export default class MyLoader extends Component {
     return (
       <Loader
         type="TailSpin"
-        color="#00BFFF"
+        color="#aa0505"
         height={80}
         width={80}
         timeout={3000} //3 secs

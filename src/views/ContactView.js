@@ -1,28 +1,23 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import React, { useEffect } from "react";
 import ContactList from "../Components/ContactList/ContactList";
 import ContactForm from "../Components/ContactForm/ContactForm";
-// import Section from "../Components/Section/Section";
+
 import Filter from "../Components/Filter/Filter";
-import s from "../App.module.css";
+import s from "./Views.module.css";
 import MyLoader from "../Components/MyLoader/MyLoader";
 
-import { contactsOperations, getLoading } from "../redux/Contacts";
+import { contactsOperations } from "../redux/Contacts";
 
 function ContactViews() {
   const dispatch = useDispatch();
-
-  // const isLoading = useSelector(getLoading);
-  // console.log(isLoading);
   useEffect(() => dispatch(contactsOperations.fetchContact()), [dispatch]);
 
   return (
     <>
-      <div className={s.block}>
-        <Filter />
-      </div>
-      <h3 className={s.mainTitle}>Contacts:</h3>
-      {/* {getLoading && <MyLoader />} */}
+      <Filter />
+
+      <h3 className={s.title}>Contacts:</h3>
       <MyLoader />
       <ContactForm />
       <ContactList />

@@ -1,0 +1,22 @@
+.link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: 700;
+  color: #4b0908;
+}
+.link:hover,
+.link:focus {
+  color: #fbca03;
+}
+.activeLink {
+  composes: link;
+  color: #b97d10;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #4b0908;
+}

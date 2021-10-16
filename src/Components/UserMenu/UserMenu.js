@@ -1,7 +1,6 @@
 import { selectors, operations } from "../../redux/Auth";
 import defaultImage from "./default-image.png";
-// import Button from "react-bootstrap/Button";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 import { useDispatch, useSelector } from "react-redux";
 
 const styles = {
